@@ -4,7 +4,10 @@ go:
   - 1.6.3
   - 1.7.1
 
+install:
+  - go get -u github.com/golang/lint/golint
+
 script:
   - go vet .
   - golint .
-  - go spec
+  - go test
